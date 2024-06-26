@@ -1,3 +1,7 @@
-theme: jekyll-theme-minimal
+markdown: redcarpet
+highlighter: pygments
+
 title: Aigle's Notes
 description: A website to host my programming notes
+
+paginate: 5
