@@ -1,1 +1,2 @@
-# aigle-levant.github.io
+# Aigle's notes
+A website to host my programming notes
