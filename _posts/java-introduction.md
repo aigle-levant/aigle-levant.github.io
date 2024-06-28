@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: java-introduction
 date: 2024-06-14
 status: ongoing
@@ -37,7 +37,7 @@ Java is verbose when compared to Python, C, JS, etc.
 Compare our previous code with...
 
 ```python
-print("Hello world!");
+print("Hello world!")
 ```
 
 and
@@ -69,5 +69,3 @@ public class helloworld
 When you create a file in Java, its name gets automatically [or manually if you don't use an IDE] assigned as a class name.
 
 Here, ``helloworld`` is the name of a public class in your program. It contains a main function [or method, which we'll be using from now onwards] within which print statement lies.
-
-We shall look deeper into classes and public / private stuff here.
