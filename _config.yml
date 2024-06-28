@@ -1,6 +1,7 @@
 markdown: redcarpet
 highlighter: pygments
 
+remote_theme: pages-themes/merlot@v0.2.0
 title: Aigle's Notes
 description: A website to host my programming notes
 
