@@ -5,4 +5,4 @@ I am a 2nd year student pursuing a Bachelors' degree in Computer Applications. s
 
 ## Notes
 
-- [Introduction to Java](_posts/java-introduction.md)
+- [Introduction to Java](./_posts/java-introduction.md)
