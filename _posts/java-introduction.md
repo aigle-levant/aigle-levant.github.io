@@ -2,7 +2,8 @@
 layout: default
 title: java-introduction
 date: 2024-06-14
-status: ongoing
+status: finished
+tags: java, programming-languages, io
 ---
 
 > Resource used:
