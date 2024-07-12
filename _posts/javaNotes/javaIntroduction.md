@@ -6,10 +6,6 @@ status: finished
 tags: java, programming-languages, io
 ---
 
-> Resource used:
->
-> <https://java-programming.mooc.fi/>
-
 ## Java - Introduction
 
 ``` java
@@ -121,3 +117,7 @@ public class testing
 ``scanner.nextInt()`` is the longer version of ``Integer.valueOf(scanner.nextLine())``. The scanner produces a String value, which we don't need here. Instead, we convert the input from scanner into integer either directly [nextInt()] or indirectly [Integer.valueOf(scanner.nextLine())].
 
 - However, if you need String input, just assign ``scanner.nextLine()`` to the String object.
+
+## References
+
+> <https://java-programming.mooc.fi/>

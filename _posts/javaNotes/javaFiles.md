@@ -1,30 +1,18 @@
----
-layout: default
-title: java-files
-date: 2024-07-02
-status: ongoing
-tags: java, programming-languages, file-handling
----
 
-> Resource used:
->
-> <https://java-programming.mooc.fi/>
-
-## Files
+# Files
 
 **Files** are collections of data stored in the hard drive of a computer. Their format determines what data can be stored in it as well as the program required to read it.
 
 - Information is made of bits [0s and 1s].
 - Modern hard drives hold about 8 trillion bits.
 
-> [!example]
 > `.psd` files are read using Adobe Photoshop, ``.txt`` can be read using any text editor
 
 **Filesystem** of a computer is responsible for keeping track of file location and performing operations [such as creating new files and such]. It abstracts the structure of a hard drive [i.e. you don't need to worry about how a file is actually stored].
 
-### Reading from a file
+## Reading from a file
 
-#### File class
+### File class
 
 We import the input/output utility ``File`` in our program. Then we create an object and assign it our file's parameters.
 
@@ -34,11 +22,12 @@ We import the input/output utility ``File`` in our program. Then we create an ob
 import java.io.File;
 public class reading
 {
-    public static void main(String[] args)
+    public static void main(String[] args)
     {
         File file = new File("C:\\Users\\Ambha\\Python\\Java\\Nothing\\one.txt");
-        //program
+        //program goes here
     }
+}
 ```
 
 Although it looks simple to use, there are a few drawbacks:
@@ -53,7 +42,7 @@ It is better to use ``Path`` class instead. Here's how you convert a ``File`` cl
 Path varName = fileName.toPath();
 ```
 
-#### Path class
+### Path class
 
 We import the ``Path`` utility to our program and then create an object.
 
@@ -66,6 +55,7 @@ public class reading
         Path file = Paths.get("fileName");
         //program
     }
+}
 ```
 
 Now, we've some technical terms to review here. Let's check them out one-by-one...
@@ -93,7 +83,7 @@ while (fileScan.hasNextLine())
 > [!note]
 > Path class often throws an IOException and returns a Boolean value when any operation is done.
 
-#### Empty lines in file
+### Empty lines in file
 
 Sometimes we may encounter an empty line while reading a file. To skip it, we use ``continue`` and ``isEmpty()`` method.
 
@@ -109,7 +99,7 @@ while (fileScan.hasNextLine())
 }
 ```
 
-### Comma-separated values [CSV]
+## Comma-separated values [CSV]
 
 Note that if we're reading from a CSV file, we've to split the string according to commas.
 
@@ -118,24 +108,24 @@ Note that if we're reading from a CSV file, we've to split the string according 
 while (true)
 {
 
-	System.out.print("Enter name and age separated by a comma: ");
-	String line = scanner.nextLine();
+ System.out.print("Enter name and age separated by a comma: ");
+ String line = scanner.nextLine();
 
-	if (line.equals(""))
-	{
-		break;
-	}
+ if (line.equals(""))
+ {
+  break;
+ }
 
-	String[] parts = line.split(",");
-	String name = parts[0];
-	int age = Integer.valueOf(parts[1]);
+ String[] parts = line.split(",");
+ String name = parts[0];
+ int age = Integer.valueOf(parts[1]);
 
-	//printing name and age
+ //printing name and age
 }
 ```
 
-#### Reading objects from a file
+### Reading objects from a file
 
-We should create a method for creating objects from file data. 
+We should create a method for creating objects from file data.
 
 In that method, we create an ``ArrayList`` object and then read the file using a while loop [like we do with a CSV file] and assigning the variables created for each part of a line as object attributes. Then we'd use a for-each loop to print every item of the ``ArrayList`` object.
