@@ -57,7 +57,7 @@ When a method copies a list for its own usage [we do this by adding it to its pa
 
 - Using this, the method can modify the value of the original variable [here, its the list].
 - The list used as parameter for a method is the same list used in program to call that method.
-- 
+
 ### Variable types in Java
 
 Variables in Java are divided into 2 categories :
@@ -104,5 +104,149 @@ We mainly use it if we want to display every item in a list.
 for (String i:list)
 {
     System.out.println(i);
+}
+```
+
+## Objects containing lists
+
+Objects can also contain lists in them.
+
+We can have ``ArrayLists`` as our instance variables. In the constructor, we assign new ``ArrayList`` to them [using ``this`` prefix]. Now we can do ``ArrayList`` operations using our instance variables.
+
+```java
+public class coffee
+{
+	private ArrayList<String> brands;
+	private ArrayList<Integer> prices;
+	
+	public coffee()
+	{
+		this.brands = new ArrayList<>();
+		this.prices = new ArrayList<>();
+	}
+
+	public void addCoffee(String brandName, int priceTag)
+	{
+		if (!(this.brands.contains(brandName)))
+		{
+			this.brands.add(brandName);
+			this.prices.add(priceTag);
+		}
+	}
+	public void removeCoffee(String brandName)
+	{
+		this.prices.remove(brandName);
+	}
+	public void removeCoffee(int index)
+	{
+		this.prices.remove(index);
+	}
+	public void printMenu()
+	{
+		System.out.println("Coffee | Price");
+		for (int i=0; i<brands.size();i++)
+		{
+			System.out.println(brands.get(i) + " | " + prices.get(i));
+		}
+	}
+}
+```
+
+>If you want to remove an element from list as you return it, try this : ``return listName.remove(i)``
+
+### Objects in an instance variable list
+
+If a list is an object's instance variable, it can also contain objects as long as the type of objects in the list are specified when we define the list.
+
+In our class ``coffee``, we create an ``ArrayList`` object of type ``customer``. We can use it in our methods as we please.
+
+```java
+public class coffee
+{
+	private String brand;
+	private double price;
+	private ArrayList <customer> order;
+
+	public coffee(String brand, double price)
+	{
+		this.brand = brand;
+		this.price = price;
+		this.order = new ArrayList<>();
+	}
+	public boolean canPurchase(customer order)
+	{
+		if (order.getBudget()<this.price)
+		{
+			return false;
+		}
+		return true;
+	}
+}
+```
+
+#### Printing an object from a list
+
+```java
+//coffee class
+public String toString()
+{
+	String str = "";
+	for (coffee i: order)
+	{
+		str = str + i.getBrand() + '\n';
+	}
+	return "Coffee: " + this.brand + '\n' + "Price: " + this.price + '\n' + str
+}
+```
+
+#### Clearing an object's list
+
+```java
+//coffee class
+public void clearOrder()
+{
+	this.order.clear();
+}
+```
+
+#### Sum from objects of a list
+
+This returns -1 if the list is empty.
+
+```java
+public double sumOfOrders()
+{
+	if (order.isEmpty())
+	{
+		return -1;
+	}
+	int sum = 0;
+	for (coffee i: order)
+	{
+		sum += i.getPrice();
+	}
+	return sum;
+}
+```
+
+#### Retrieving specific object from list
+
+```java
+//coffee class
+public coffee getLocation()
+{
+	if (this.order.isEmpty())
+	{
+		return null;
+	}
+	coffee obj = this.order.get(1);
+	for (coffee i:this.order)
+	{
+		if (!(obj.isEmpty()))
+		{
+			obj = i;
+		}
+	}
+	return obj;
 }
 ```
