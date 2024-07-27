@@ -1,0 +1,22 @@
+/*importing fonts*/
+@import url("https://fonts.googleapis.com/css?family=Playwrite Argentina");
+@import url("https://fonts.googleapis.com/css?family=PT Sans");
+
+body
+{
+    background-color: #3C3E3E;
+    color: white;
+    font-size: 14px;
+    margin: 50px;
+}
+
+#main-title
+{
+    font-family: "Playwrite Argentina", serif;
+    font-weight: bold;
+}
+
+.content
+{
+    margin: 100px;
+}
