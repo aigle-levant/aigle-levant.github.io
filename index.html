@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aigle's Notes</title>
-    <link rel="stylesheet" href="..\styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <!--TODO : Add Aigle Logo and present to prof-->
-        <h1 id="main-title">Aigle's Notes</h1>
-        <p class="text">A place to store my programming and other related notes</p>
-        <div class="content">
-            <nav class="navigation">
-                <!--TODO : Make programming lang separate from programming concepts-->
-                <ul class="main-content" style="text-align: center;">
-                    <li><a class="link" href="javaNotes/java.html">Java</a></li>
-                    <li><a class="link" href="">Python</a></li>
-                    <li><a class="link" href="">Web-dev</a></li>
-                    <li><a class="link" href="conceptsNotes/concepts.html">Programming</a></li>
-                    <li><li><a class="link" href="">DSA</a></li>
-                    <li><a class="link" href="ccNotes/cloud.html">Cloud Computing</a></li>
-                </ul>
-            </nav>
+    <div class="container main ">
+        <div class="bg" style="background-color: #3C3E3E;">
+            <div class="container page">
+                <div class="container header" style="padding: 1em;">
+                    <div class="header-row center">
+                        <h1 id="main-title">Aigle's Notes</h1>
+                    </div>
+                    <div class="tagline">
+                        <p id="tag">A place to store my programming notes</p>
+                    </div>
+                    <div id="highlight"></div>
+                </div>
+                <div style="margin: 3em 0 0; padding: 1em;">
+                    <div class="container card">
+                        <div class="card-content java">
+                            <h2 class="text">
+                                Java
+                            </h2>
+                            <p class="flavour-text text">
+                                Learn about the most favoured language for OOP!
+                            </p>
+                            <button class="button">
+                                GO
+                            </button>
+                            
+                        </div>
+                        <div class="card-content cloud">
+                            <h2 class="text">
+                                Cloud Computing
+                            </h2>
+                            <p class="flavour-text text">
+                                Explore the new technology based on cloud!
+                            </p>
+                            <button class="button">
+                                GO
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-</html>
