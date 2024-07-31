@@ -1,0 +1,21 @@
+{
+  "name": "aigle-levant.github.io",
+  "version": "1.0.0",
+  "description": "A website to host my programming notes",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "keywords": [],
+  "author": "aigle-levant",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "aigle-levant"
+  }
+}

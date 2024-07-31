@@ -1,6 +1,8 @@
 /*importing fonts*/
 @import url("https://fonts.googleapis.com/css?family=Playwrite+AR");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
+@import url("https://fonts.googleapis.com/css?family=Inter");
 
 body
 {
@@ -37,18 +39,10 @@ body
 
 #tag
 {
-    font-family: 'PT Sans', monospace;
+    font-family: 'Major Mono Display', monospace;
     font-size: 1.3em;
     margin-bottom: 5px;
-}
-
-#highlight
-{
-    background-color: rgb(158, 207, 191);
-    width: 7.5em;
-    height: 0.5em;
-    margin-left: 245px;
-    padding: 0;
+    text-align: center;
 }
 
 /*Flexbox container*/
@@ -63,7 +57,7 @@ body
 
 .card-content
 {
-    box-shadow: rgba(239, 237, 237, 0.505) 0px 1px 3px, rgba(228, 221, 221, 0.751) 0px 1px 2px;
+    border: 1px solid rgb(77, 87, 87);
     padding: 1.5em;
     color: white;
     gap: 2em;
@@ -71,17 +65,19 @@ body
 
 .text
 {
-    font-family: 'PT Sans', serif;
+    font-family: 'Major Mono Display', monospace;
 }
 
 .text h2
 {
     font-size: 1.5em;
+    font-weight: 200;
 }
 
 .flavour-text
 {
-    font-size: 1em;
+    font-size: 14px;
+    font-weight: 100;
 }
 
 .button
